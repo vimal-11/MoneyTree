@@ -42,3 +42,7 @@ def contact(request):
 
     else: 
         return render(request, 'contact.html', {})
+    
+
+def detail(request):
+    return render(request, 'detail.html', {})
