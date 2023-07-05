@@ -11,8 +11,8 @@
                 <img class="w-100" src="{% static 'home/img/carousel-1.jpg' %}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase">Business Consultancy</h5>
-                        <h1 class="display-1 text-white mb-md-4">We Provide Solution On Your Business</h1>
+                        <h5 class="text-white text-uppercase">MoneyTree Consultancy</h5>
+                        <h1 class="display-1 text-white mb-md-4">Get your loans with best Interest rate</h1>
                         <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a> -->
                         <a href="{% url 'home:contact' %}" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Contact Us</a>
                     </div>
@@ -22,8 +22,8 @@
                 <img class="w-100" src="{% static 'home/img/carousel-2.jpg' %}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase">Business Consultancy</h5>
-                        <h1 class="display-1 text-white mb-md-4">Take Our Help To Reach The Top Level</h1>
+                        <h5 class="text-white text-uppercase">MoneyTree Consultancy</h5>
+                        <h1 class="display-1 text-white mb-md-4">Minimal Documentation and Quick Processing</h1>
                         <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Get Quote</a> -->
                         <a href="{% url 'home:contact' %}" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">Contact Us</a>
                     </div>
@@ -98,60 +98,70 @@
     </div>
     <div class="row g-5">
         <div class="col-lg-4 col-md-6">
-            <a href="{% url 'home:detail' %}">
+            <a href="{% url 'home:detail' name='Unsecured Business Loan' %}">
             <div class="service-item bg-secondary text-center px-5">
                 <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                     <i class="fa fa-user-tie fa-2x"></i>
                 </div>
-                <h3 class="mb-3">Business Research</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                <h3 class="mb-3">Unsecured Business Loan</h3>
+                <p style="color: #6c6a6a;" class="mb-0">Expand your business with unsecured business loan at low interest rate</p>
             </div>
             </a>
         </div>
         <div class="col-lg-4 col-md-6">
+            <a href="{% url 'home:detail' name='Working Capital' %}">
             <div class="service-item bg-secondary text-center px-5">
                 <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                     <i class="fa fa-chart-pie fa-2x"></i>
                 </div>
-                <h3 class="mb-3">Stretagic Planning</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                <h3 class="mb-3">Working Capital</h3>
+                <p style="color: #6c6a6a;" class="mb-0">Avail optimum level of funding through overdraft/cash credit and term loan facilities</p>
             </div>
+            </a>
         </div>
         <div class="col-lg-4 col-md-6">
+            <a href="{% url 'home:detail' name='Personel Loan' %}">
             <div class="service-item bg-secondary text-center px-5">
                 <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                     <i class="fa fa-chart-line fa-2x"></i>
                 </div>
-                <h3 class="mb-3">Market Analysis</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                <h3 class="mb-3">Personel Loan</h3>
+                <p style="color: #6c6a6a;" class="mb-0">Avail personel loan at low interest rate</p>
             </div>
+             </a>
         </div>
         <div class="col-lg-4 col-md-6">
+            <a href="{% url 'home:detail' name='Auto Loan' %}">
             <div class="service-item bg-secondary text-center px-5">
                 <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                     <i class="fa fa-chart-area fa-2x"></i>
                 </div>
-                <h3 class="mb-3">Financial Analaysis</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                <h3 class="mb-3">Auto Loan</h3>
+                <p style="color: #6c6a6a;" class="mb-0">Drive home your new or used car loan with 100% financing</p>
             </div>
+            </a>
         </div>
         <div class="col-lg-4 col-md-6">
+            <a href="{% url 'home:detail' name='Mortgage Loan' %}" >
             <div class="service-item bg-secondary text-center px-5">
                 <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                     <i class="fa fa-balance-scale fa-2x"></i>
                 </div>
-                <h3 class="mb-3">legal Advisory</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                <h3 class="mb-3">Mortgage Loan</h3>
+                <p style="color: #6c6a6a;" class="mb-0">Get funding against your property at best interest rate and minimum documentation</p>
             </div>
+            </a>
         </div>
         <div class="col-lg-4 col-md-6">
+            <a href="{% url 'home:detail' name='Home Loan' %}">
             <div class="service-item bg-secondary text-center px-5">
                 <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                     <i class="fa fa-house-damage fa-2x"></i>
                 </div>
-                <h3 class="mb-3">Tax & Insurance</h3>
-                <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor ipsum amet eos erat ipsum lorem et sit sed stet lorem</p>
+                <h3 class="mb-3">Home Loan</h3>
+                <p style="color: #6c6a6a;" class="mb-0">Buy your dream home at the best interest rates</p>
             </div>
+            </a>
         </div>
     </div>
 </div>
