@@ -29,11 +29,12 @@ def contact(request):
         )
         con_db.save()
 
+        msg_frm = f"from: {message_email}\n\n" + message
         # send mail
-
+        print(msg_frm)
         send_mail(
             message_sub,
-            message,
+            msg_frm,
             message_email,
             [settings.EMAIL_HOST_USER],
         )
