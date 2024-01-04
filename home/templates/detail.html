@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load custom_filters %}
 
 {% block content %}
 
@@ -7,10 +8,10 @@
     <div class="container-fluid bg-dark p-5">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="display-4 text-white">{{name}}</h1>
+                <h1 class="display-4 text-white">{{name|urldecode}}</h1>
                 <a href="">Home</a>
                 <i class="far fa-square text-primary px-2"></i>
-                <a href="">{{name}}</a>
+                <a href="">{{name|urldecode}}</a>
             </div>
         </div>
     </div>
@@ -23,23 +24,20 @@
             <div class="col-lg-8">
                 <!-- Blog Detail Start -->
                 <div class="mb-5 ml-10">
-                    {% if name|lower == "Unsecured Business Loan"|lower %}
+                {% with decoded_name=name|urldecode %}
+                    {% if decoded_name == "Unsecured Business Loan" %}
 
                     <img class="img-fluid w-100 mb-5" src="{% static 'home/img/blog-1.jpg' %}" alt="">
-                    <h1 class="mb-4">{{name}}</h1><br>
+                    <h1 class="mb-4">{{decoded_name}}</h1><br>
+                    <p>It is a collateral free financing without any mortgages and security.</p>
                     <p><b>Features & Benefits: </b><br>
 
                         <ul>
-                            <li>No collateral/ guarantor / security required</li>
-                            <li>Loan upto 1cr from one bank</li>
-                            <li>The loan tenure ranges from 3-48 months</li>
-                            <li>Transparent Interest Rates - Pay interest 13% onwards</li>
-                            <li>Speedy approvals & Hassle Free Loan Disbursement</li>
-                            <li>Funds available for business expansion, working capital</li>
-                            <li>Multiple Loan Programs & Attractive Bundled Offerings</li>
-                            <li>High loan amounts (Multiple Bank/NBFC’s Options available)</li>
-                            <li>Bundled current account offering</li>
-                            <li>Business loan under CGTMSE scheme also</li>
+                            <li>Loan upto Rs.50L</li>
+                            <li>Low Interest Rate</li>
+                            <li>Tenure upto 60 months</li>
+                            <li>Simple Process</li>
+                            <li>Quick approvals</li>
                         </ul>
                          
                         
@@ -56,62 +54,67 @@
                     
                     {% endif %}
 
-                    {% if name|lower == "Working Capital"|lower %}
+                    {% if decoded_name == "Working Capital" %}
                     
                     <img class="img-fluid w-100 mb-5" src="{% static 'home/img/blog-1.jpg' %}" alt="">
-                    <h1 class="mb-4">{{name}}</h1>
-                    <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut
-                        magna lorem. Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet
-                        amet magna accusam consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at
-                        sanctus et. Ipsum sit gubergren dolores et, consetetur justo invidunt at et
-                        aliquyam ut et vero clita. Diam sea sea no sed dolores diam nonumy, gubergren
-                        sit stet no diam kasd vero.</p>
-                    <p>Voluptua est takimata stet invidunt sed rebum nonumy stet, clita aliquyam dolores
-                        vero stet consetetur elitr takimata rebum sanctus. Sit sed accusam stet sit
-                        nonumy kasd diam dolores, sanctus lorem kasd duo dolor dolor vero sit et. Labore
-                        ipsum duo sanctus amet eos et. Consetetur no sed et aliquyam ipsum justo et,
-                        clita lorem sit vero amet amet est dolor elitr, stet et no diam sit. Dolor erat
-                        justo dolore sit invidunt.</p>
-                    <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor
-                        invidunt at est sanctus sanctus. Clita dolores sit kasd diam takimata justo diam
-                        lorem sed. Magna amet sed rebum eos. Clita no magna no dolor erat diam tempor
-                        rebum consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No at tempor
-                        sea diam kasd, takimata ea nonumy elitr sadipscing gubergren erat. Gubergren at
-                        lorem invidunt sadipscing rebum sit amet ut ut, voluptua diam dolores at
-                        sadipscing stet. Clita dolor amet dolor ipsum vero ea ea eos.</p>
+                    <h1 class="mb-4">{{decoded_name}}</h1>
+                    <p>Avail secured overdraft/cash credit facilities, any termloan with adequate collateral of Residential/Commercial property.</p>
+                    <p>Avail unsecured credit facilities upto 1 Crore under CGTMSE program.</p>
+                    <p><b>Features & Benefits: </b><br>
+
+                        <ul>
+                            <li>Minimum turnover of Rs.7Cr</li>
+                            <li>Best Interest Rate</li>
+                            <li>100% funding of property value</li>
+                        </ul>
+                         
+                        
+                        <br><b>Who is eligible for the Business Instalment Loan?</b><br><br>
+                        
+                        <ul>
+                            <li>Sole proprietors / proprietorship firms</li>
+                            <li>Partnership firms</li>
+                            <li>Private limited companies</li>
+                            <li>Closely-held and public-limited companies</li>
+                            <li>Professionals – doctors, architects, chartered accountants, business consultants</li>
+                        </ul>
+                    </p>
 
                     {% endif %}
 
-                    {% if name|lower == "Personel Loan"|lower %}
+                    {% if decoded_name == "Personel Loan" %}
                     
                     <img class="img-fluid w-100 mb-5" src="{% static 'home/img/blog-1.jpg' %}" alt="">
-                    <h1 class="mb-4">{{name}}</h1>
-                    <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut
-                        magna lorem. Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet
-                        amet magna accusam consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at
-                        sanctus et. Ipsum sit gubergren dolores et, consetetur justo invidunt at et
-                        aliquyam ut et vero clita. Diam sea sea no sed dolores diam nonumy, gubergren
-                        sit stet no diam kasd vero.</p>
-                    <p>Voluptua est takimata stet invidunt sed rebum nonumy stet, clita aliquyam dolores
-                        vero stet consetetur elitr takimata rebum sanctus. Sit sed accusam stet sit
-                        nonumy kasd diam dolores, sanctus lorem kasd duo dolor dolor vero sit et. Labore
-                        ipsum duo sanctus amet eos et. Consetetur no sed et aliquyam ipsum justo et,
-                        clita lorem sit vero amet amet est dolor elitr, stet et no diam sit. Dolor erat
-                        justo dolore sit invidunt.</p>
-                    <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor
-                        invidunt at est sanctus sanctus. Clita dolores sit kasd diam takimata justo diam
-                        lorem sed. Magna amet sed rebum eos. Clita no magna no dolor erat diam tempor
-                        rebum consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No at tempor
-                        sea diam kasd, takimata ea nonumy elitr sadipscing gubergren erat. Gubergren at
-                        lorem invidunt sadipscing rebum sit amet ut ut, voluptua diam dolores at
-                        sadipscing stet. Clita dolor amet dolor ipsum vero ea ea eos.</p>
+                    <h1 class="mb-4">{{decoded_name}}</h1>
+                    <p>Best Personal loan offer suitable for your needs from 10 plus vendors</p>
+                    <p><b>Features & Benefits: </b><br>
+
+                        <ul>
+                            <li>Loan upto Rs.10L</li>
+                            <li>Low Interest Rate</li>
+                            <li>Tenure upto 60 months</li>
+                            <li>Simple Process</li>
+                            <li>Quick approvals</li>
+                        </ul>
+                         
+                        
+                        <br><b>Who is eligible for the Business Instalment Loan?</b><br><br>
+                        
+                        <ul>
+                            <li>Sole proprietors / proprietorship firms</li>
+                            <li>Partnership firms</li>
+                            <li>Private limited companies</li>
+                            <li>Closely-held and public-limited companies</li>
+                            <li>Professionals – doctors, architects, chartered accountants, business consultants</li>
+                        </ul>
+                    </p>
 
                     {% endif %}
 
-                    {% if name|lower == "Auto Loan"|lower %}
+                    {% if decoded_name == "Auto Loan" %}
                     
                     <img class="img-fluid w-100 mb-5" src="{% static 'home/img/blog-1.jpg' %}" alt="">
-                    <h1 class="mb-4">{{name}}</h1>
+                    <h1 class="mb-4">{{decoded_name}}</h1>
                     <p><b>New Car Loan </b><br>
 
                         <ul>
@@ -147,10 +150,10 @@
 
                     {% endif %}
 
-                    {% if name|lower == "Home Loan"|lower %}
+                    {% if decoded_name == "Home Loan" %}
                     
                     <img class="img-fluid w-100 mb-5" src="{% static 'home/img/blog-1.jpg' %}" alt="">
-                    <h1 class="mb-4">{{name}}</h1>
+                    <h1 class="mb-4">{{decoded_name}}</h1>
                     <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut
                         magna lorem. Nonumy vero labore lorem sanctus rebum et lorem magna kasd, stet
                         amet magna accusam consetetur eirmod. Kasd accusam sit ipsum sadipscing et at at
@@ -173,10 +176,10 @@
 
                     {% endif %}
 
-                    {% if name|lower == "Mortgage Loan"|lower %}
+                    {% if decoded_name == "Mortgage Loan" %}
                     
                     <img class="img-fluid w-100 mb-5" src="{% static 'home/img/blog-1.jpg' %}" alt="">
-                    <h1 class="mb-4">{{name}}</h1>
+                    <h1 class="mb-4">{{decoded_name}}</h1>
                     <p><b>Features: </b><br>
                         <ul>
                             <li>Collateral: Residential commercial and industrial property</li>
@@ -249,7 +252,8 @@
                     </p>
 
                     {% endif %}
-                    
+                
+                {% endwith %}
                 </div>
                 <!-- Blog Detail End -->
 
@@ -273,7 +277,7 @@
                 <!-- Category End -->
 
                 <!-- Tags Start -->
-                <div class="mb-5">
+                <!-- <div class="mb-5">
                     <h2 class="mb-4">Tag Cloud</h2>
                     <div class="d-flex flex-wrap m-n1">
                         <a href="" class="btn btn-secondary m-1">Design</a>
@@ -283,7 +287,7 @@
                         <a href="" class="btn btn-secondary m-1">Writing</a>
                         <a href="" class="btn btn-secondary m-1">Consulting</a>
                     </div>
-                </div>
+                </div> -->
                 <!-- Tags End -->
             </div>
             <!-- Sidebar End -->
